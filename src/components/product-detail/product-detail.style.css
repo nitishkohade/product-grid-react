@@ -1,0 +1,33 @@
+.productDetail {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 57rem;
+    margin: 20px;
+}
+
+.productDetail .img {
+    max-width: 54rem;
+    width: 35%;
+    border-radius: 4%;
+    margin: 15px;
+}
+
+.productDetail .allDetails {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px;
+}
+
+.productDetail .allDetails .titlePrice {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.productDetail .allDetails .description {
+    margin-top: 10px;
+}

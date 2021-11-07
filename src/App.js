@@ -1,24 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import { Redirect, Route, Switch } from 'react-router';
+import CartScreen from './view/cart/cart';
+import ProductScreen from './view/product/product'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path="/" render={() => <Redirect to="/list" />} />
+      <Route exact path="/list" render={() => <CartScreen />} />
+      <Route exact path="/list/:productID" render={() => <ProductScreen />} />
+    </Switch>
   );
 }
 
